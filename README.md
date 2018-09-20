@@ -1,27 +1,31 @@
-# BaseProject
+# Projeto Maria 2 - FRONTEND
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.2.
+O Projeto Maria é uma ferramenta de automação de estimativa de vendas com base em métodos estatísticos.
 
-## Development server
+Ele está sendo desenvolvido como projeto integrador das disciplinas e fases do  [Curso Superior de Tecnologia em Análise e Desenvolvimento de Sistemas](https://www.sc.senai.br/siteinstitucional/curso/superior-de-tecnologia-em-analise-e-desenvolvimento-de-sistemas/3404).
+Este projeto foi gerado apartir do [Angular CLI](https://github.com/angular/angular-cli) versão 1.7.2.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Servidor de Desenvolvimento
 
-## Code scaffolding
+Execute `ng serve` para rodar o Servidor de desenvolvimento. Navegue para a url  `http://localhost:4200/`. A Aplicação vai automaticamente atualizar caso você faça alguma alteração.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Gerar Código
+
+Execute `ng generate component component-name` no terminal  para gerar um novo componente. Você pode também utilizar os comandos 
+`ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+Execute `ng build` para fazer o *build* do projeto. O resultado vai ficar armazenado no diretório `dist/`. Use a *flag* `-prod` para realizar o *Build* de produção.
 
-## Running unit tests
+## Testes Unitários
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Execute `ng test` para realizar os testes unitários através do [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## Testes de ponta a ponta (end to end)
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Execute `ng e2e` para executar teste de ponta a ponta através do [Protractor](http://www.protractortest.org/).
 
-## Further help
+## Informações do Angular
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Para mais informações do Angular CLI execute `ng help` ou acesse a pagina [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
