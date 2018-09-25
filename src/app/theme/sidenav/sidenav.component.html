@@ -1,105 +1,97 @@
-<!-- <nav class="col-md-2 d-none d-md-block bg-light sidebar">
-  <div class="sidebar-sticky">
-    <ul class="nav flex-column">
-      <li class="nav-item">
-        <a class="nav-link active" href="#">
-          <span data-feather="home"></span>
-          Home <span class="sr-only">(current)</span>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">
-          <span data-feather="file"></span>
-          Canal
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">
-          <span data-feather="shopping-cart"></span>
-          Família
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">
-          <span data-feather="users"></span>
-          Histórico
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">
-          <span data-feather="bar-chart-2"></span>
-          Produto
-        </a>
-      </li>
-      <li class="nav-item">
-          <a class="nav-link" href="#">
-            <span data-feather="bar-chart-2"></span>
-            Estimativa
-          </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="example">
-          <span></span>
-          Exemplo
-        </a>
-      </li>
-    </ul>
-  </div>
-</nav> -->
-
-
-    <div class="sidebar-nav sidebar-intelbras">
-        <ul class="nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Canal
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Carregar</a>
-              <a class="dropdown-item" href="#">Relatório</a>
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Família
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Carregar</a>
-              <a class="dropdown-item" href="#">Relatório</a>
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Histórico
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Carregar</a>
-              <a class="dropdown-item" href="#">Relatório</a>
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<div class="sidebar-nav sidebar-intelbras">
+  <ul class="nav">
+  <li class="nav-item active">
+    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+  </li>     
+  <div id="accordion">
+      <div class="card" [ngClass]="{'card-active':canal_active === true}">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <button (click)="canal_active = !canal_active" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                Canal
+              </button>
+            </h5>
+          </div>
+          <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body">
+                  Carregar
+               </div>
+               <div class="card-body">
+                   Relatório
+                </div>
+          </div>
+        </div>
+      <div class="card" [ngClass]="{'card-active':produto_active === true}">
+        <div class="card-header" id="headingTwo">
+          <h5 class="mb-0">
+            <button  class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" (click)="produto_active = !produto_active" >
               Produto
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Carregar</a>
-              <a class="dropdown-item" href="#">Relatório</a>
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Estimativa
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Carregar</a>
-                <a class="dropdown-item" href="#">Relatório</a>
+            </button>
+          </h5>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+            <div class="card-body">
+                Carregar
+             </div>
+             <div class="card-body">
+                 Relatório
               </div>
-            </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="example">Exemplo</a>
-          </li>
-        </ul>
+        </div>
+      </div>
+      <div class="card" [ngClass]="{'card-active':historico_active === true}">
+        <div class="card-header" id="headingThree">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" (click)="historico_active = !historico_active">
+              Histórico
+            </button>
+          </h5>
+        </div>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+          <div class="card-body">
+             Carregar
+          </div>
+          <div class="card-body">
+              Relatório
+           </div>
+        </div>
+      </div>
+      <div class="card" [ngClass]="{'card-active':familia_active === true}">
+          <div class="card-header" id="headingFour">
+            <h5 class="mb-0">
+              <button (click)="familia_active = !familia_active" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                Família
+              </button>
+            </h5>
+          </div>
+          <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+              <div class="card-body">
+                  Carregar
+               </div>
+               <div class="card-body">
+                   Relatório
+                </div>
+          </div>
+        </div>
+        <div class="card" [ngClass]="{'card-active':estimativa_active === true}">
+            <div class="card-header" id="headingFive">
+              <h5 class="mb-0">
+                <button (click)="estimativa_active = !estimativa_active" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                  Estimativa
+                </button>
+              </h5>
+            </div>
+            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                <div class="card-body">
+                    Carregar
+                 </div>
+                 <div class="card-body">
+                     Relatório
+                  </div>
+            </div>
+          </div>
     </div>
+<li class="nav-item">
+  <a class="nav-link" routerLink="example">Exemplo</a>
+</li>
+</ul>
+</div>
