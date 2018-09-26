@@ -1,21 +1,57 @@
-<div class="container">
-    <div class="row">
-      <button routerLink="new" type="button" class="btn btn-primary">Create</button>
-    </div>
-    <div class="row">
-        <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Title</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr *ngFor="let item of data">
-                <td>{{item.id | json}}</td>
-                <td>{{item.title | json}}</td>
-              </tr>
-            </tbody>
-          </table>
+    <h4>Produto</h4>
+    <hr>
+
+  <div class="input-group mb-8">
+    <label>Sku </label>
+    <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="basic-addon2">
+    <div class="input-group-append">
+      <span class="input-group-text" id="basic-addon2">Pesquisar</span>
     </div>
   </div>
+
+  <div class="input-group mb-8">
+      <label>Nome </label>
+      <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="basic-addon2">
+      <div class="input-group-append">
+        <span class="input-group-text" id="basic-addon2">Pesquisar</span>
+      </div>
+  </div>
+
+  <div class="input-group mb-8">
+      <label>Código Família </label>
+      <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="basic-addon2">
+      <div class="input-group-append">
+        <span class="input-group-text" id="basic-addon2">Pesquisar</span>
+      </div>
+  </div>
+ 
+  <hr>
+
+  <h4>Relatório</h4>
+
+  <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">SKU</th>
+          <th scope="col">Nome</th>
+          <th scope="col">ID Família</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row"> </th>
+          <td>  </td>
+          <td> </td>
+          <td> </td>
+        </tr>
+        <tr>
+          <th scope="row"> </th>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <button class="btn btn-sucess">Gerar Relatório</button>
