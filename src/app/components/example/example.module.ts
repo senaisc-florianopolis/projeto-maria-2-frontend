@@ -7,18 +7,21 @@ import { ExampleRoutingModule } from './example-routing.module';
 import { ExampleService } from './example.service';
 import { HttpModule } from '@angular/http';
 import { FileUploader } from 'ng2-file-upload/ng2-file-upload';
-import {FileUploadModule} from 'ng2-file-upload';
+import { FileUploadModule } from 'ng2-file-upload';
+import { UploadComponent } from '../upload/upload.component';
 
 @NgModule({
   imports: [
     CommonModule,
     ExampleRoutingModule,
     HttpModule,
-    FileUploadModule
+    FileUploadModule,
+
   ],
   declarations: [
     ExampleComponent,
-    CreateExampleComponent
+    CreateExampleComponent,
+    UploadComponent
   ],
   providers: [
     ExampleService

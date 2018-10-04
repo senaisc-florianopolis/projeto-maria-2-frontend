@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="input-group">
+        <input type="file" class="form-control input-upload" name="fileUplaod" id="fileUpload" multiple ng2FileSelect
+          [uploader]="uploader" aria-describedby="basic-addon2">
+        <div class="input-group-append">
+          <button type="button" class="btn btn-success btn-s btn-upload " (click)="validateFile()" [disabled]="!uploader.getNotUploadedItems().length">
+            Selecionar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
