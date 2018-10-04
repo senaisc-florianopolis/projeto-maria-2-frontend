@@ -11,6 +11,7 @@ import { FileUploadModule } from 'ng2-file-upload';
 import { HttpClientModule } from '@angular/common/http';
 import { UploadComponent } from './components/upload/upload.component';
 import { ReportComponent } from './components/report/report.component';
+import { HeaderPageComponent } from './theme/header-page/header-page.component';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { ReportComponent } from './components/report/report.component';
     NavBarComponent,
     SidenavComponent,
     CarregarComponent,
+    HeaderPageComponent,
     // UploadComponent,
     // ReportComponent,
   ],

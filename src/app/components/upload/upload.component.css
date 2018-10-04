@@ -8,3 +8,14 @@
 .input-upload {
     border: solid 2px #18a2218c;
 }
+
+.btn-upload-confirm {
+    width: 150px;
+    float: right;
+    background-color: #18a221;
+    line-height: 35px;
+}
+
+.div-btn-upload-confirm {
+    margin-top: 51px;
+}

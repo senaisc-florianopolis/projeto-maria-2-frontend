@@ -10,6 +10,11 @@
           </button>
         </div>
       </div>
+      <div class="div-btn-upload-confirm">
+        <button type="button" class="btn btn-success btn-s btn-upload-confirm" (click)="validateFile()" [disabled]="!uploader.getNotUploadedItems().length">
+          Confirmar
+        </button>
+      </div>
     </div>
   </div>
 </div>
