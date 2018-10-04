@@ -1,36 +1,68 @@
-<button type="button" class="btn btn-primary" (click)="testarPost()">Testar POST</button>
-<pre>{{response | json}}</pre>
-<form>
-    <div class="form-group">
-        <label for="exampleFormControlInput1">Email address</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row card">
+
+        <div class="card-body">
+          <h4>Adicionar Arquivo</h4>
+          <div class="input-group">
+
+            <input type="file" class="form-control" name="fileUplaod" id="fileUpload" multiple ng2FileSelect [uploader]="uploader"
+              aria-describedby="basic-addon2">
+
+            <div class="input-group-append">
+
+              <button type="button" class="btn btn-success btn-s" (click)="validateFile()" [disabled]="!uploader.getNotUploadedItems().length">
+                Upload all
+              </button>
+              <button type="button" class="btn btn-danger btn-s" (click)="uploader.clearQueue()" [disabled]="!uploader.queue.length">
+                Remover
+              </button>
+            </div>
+
+          </div>
+        </div>
       </div>
-      <div class="form-group">
-        <label for="exampleFormControlSelect1">Example select</label>
-        <select class="form-control" id="exampleFormControlSelect1">
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="exampleFormControlSelect2">Example multiple select</label>
-        <select multiple class="form-control" id="exampleFormControlSelect2">
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="exampleFormControlTextarea1">Example textarea</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-      </div>
-    <div class="form-group">
-      <label for="exampleFormControlFile1">Example file input</label>
-      <input type="file" class="form-control-file" id="exampleFormControlFile1">
     </div>
-</form>
+  </div>
+  <br>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of uploader.queue">
+        <td><strong>{{ item?.file?.name }}</strong></td>
+        <td *ngIf="uploader.isHTML5" nowrap>{{ item?.file?.size/1024/1024 | number:'.2' }} MB</td>
+        <td *ngIf="uploader.isHTML5">
+          <div class="progress" style="margin-bottom: 0;">
+            <div class="progress-bar" role="progressbar" [ngStyle]="{ 'width': item.progress + '%' }"></div>
+          </div>
+        </td>
+        <td nowrap>
+          <button type="button" class="btn btn-success btn-xs" (click)="validateFile()" [disabled]="item.isReady || item.isUploading || item.isSuccess">
+            <span class="glyphicon glyphicon-upload"></span> Upload
+          </button>
+          <button type="button" class="btn btn-danger btn-xs" (click)="item.remove()">
+            <span class="glyphicon glyphicon-trash"></span> Remove
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+
+  <div *ngIf="attachmentList.length > 0">
+    <div class="row card">
+      <h4>Download</h4>
+
+      <div class="row" *ngFor="let item of attachmentList; let i = index" style="margin:10px;padding:5px;background-color:rgb(231, 229, 229); border-radius:5px; line-height:40px;">
+        <div class="col-sm-7">{{item.originalname}}</div>
+        <div class="col-sm-5" style="text-align:center;"><button type="button" class="btn btn-primary" (click)="download(i)">Download</button></div>
+      </div>
+    </div>
+  </div>

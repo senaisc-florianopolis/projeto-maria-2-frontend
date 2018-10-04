@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { ExampleModule } from './components/example/example.module';
 import { NavBarComponent } from './theme/nav-bar/nav-bar.component';
 import { SidenavComponent } from './theme/sidenav/sidenav.component';
+import { CarregarComponent } from './theme/carregar/carregar.component';
+import {FileUploadModule} from 'ng2-file-upload';
+import { HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -13,12 +16,15 @@ import { SidenavComponent } from './theme/sidenav/sidenav.component';
     AppComponent,
     NavBarComponent,
     SidenavComponent,
+    CarregarComponent,
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot([]),
     ExampleRoutingModule,
-    ExampleModule
+    ExampleModule,
+    HttpClientModule,
+    FileUploadModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -6,12 +6,15 @@ import { CommonModule } from '@angular/common';
 import { ExampleRoutingModule } from './example-routing.module';
 import { ExampleService } from './example.service';
 import { HttpModule } from '@angular/http';
+import { FileUploader } from 'ng2-file-upload/ng2-file-upload';
+import {FileUploadModule} from 'ng2-file-upload';
 
 @NgModule({
   imports: [
     CommonModule,
     ExampleRoutingModule,
-    HttpModule
+    HttpModule,
+    FileUploadModule
   ],
   declarations: [
     ExampleComponent,
