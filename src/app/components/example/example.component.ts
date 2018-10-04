@@ -18,9 +18,11 @@ export class ExampleComponent implements OnInit {
   }
 
   getListUsers() {
-    this.service.get().subscribe(data =>
-        this.data = data,
-        error => console.log(error)
+    this.service.get().subscribe(data => {
+      console.log(data),
+        this.data = data
+    },
+      error => console.log(error)
     );
   }
 
