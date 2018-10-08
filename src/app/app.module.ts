@@ -12,6 +12,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { UploadComponent } from './components/upload/upload.component';
 import { ReportComponent } from './components/report/report.component';
 import { HeaderPageComponent } from './theme/header-page/header-page.component';
+import { LoginComponent } from './components/login/login.component';
+import { LoginModule } from './components/login/login.module';
 
 
 @NgModule({
@@ -21,6 +23,7 @@ import { HeaderPageComponent } from './theme/header-page/header-page.component';
     SidenavComponent,
     CarregarComponent,
     HeaderPageComponent,
+    LoginComponent,
     // UploadComponent,
     // ReportComponent,
   ],
@@ -30,7 +33,8 @@ import { HeaderPageComponent } from './theme/header-page/header-page.component';
     ExampleRoutingModule,
     ExampleModule,
     HttpClientModule,
-    FileUploadModule
+    FileUploadModule,
+    LoginModule
   ],
   exports: [],
   providers: [],

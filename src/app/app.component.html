@@ -1,10 +1,15 @@
-<app-nav-bar></app-nav-bar>
-<div class="container-fluid">
-    <div class="row sidenav-location">
-        <app-sidenav></app-sidenav>
+<div *ngIf="isLogged == 'true'">
+    <app-nav-bar></app-nav-bar>
+    <div class="container-fluid">
+        <div class="row sidenav-location">
+            <app-sidenav></app-sidenav>
+        </div>
+        <div class="intelbras-content">
+            <app-header-page [routeName]="" [routePath]=""></app-header-page>
+            <router-outlet></router-outlet>
+        </div>
     </div>
-    <div class="intelbras-content">
-        <app-header-page [routeName]="" [routePath]=""></app-header-page>
-        <router-outlet></router-outlet>
-    </div>
+</div>
+<div *ngIf="isLogged != 'true'">
+    <router-outlet></router-outlet>
 </div>

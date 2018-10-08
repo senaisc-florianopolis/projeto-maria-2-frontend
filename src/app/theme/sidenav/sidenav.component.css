@@ -15,6 +15,11 @@
     color: #fff;
     font-weight: 800;
 }
+.nav-link-carregar {
+    color: #fff;
+    text-decoration: none;
+}
+
 
 /*.card {
     background-color: transparent;
