@@ -9,11 +9,10 @@ import { SidenavComponent } from './theme/sidenav/sidenav.component';
 import { CarregarComponent } from './theme/carregar/carregar.component';
 import { FileUploadModule } from 'ng2-file-upload';
 import { HttpClientModule } from '@angular/common/http';
-import { UploadComponent } from './components/upload/upload.component';
-import { ReportComponent } from './components/report/report.component';
 import { HeaderPageComponent } from './theme/header-page/header-page.component';
 import { LoginComponent } from './components/login/login.component';
 import { LoginModule } from './components/login/login.module';
+import { UploadComponent } from './components/upload/upload.component';
 
 
 @NgModule({
@@ -24,7 +23,7 @@ import { LoginModule } from './components/login/login.module';
     CarregarComponent,
     HeaderPageComponent,
     LoginComponent,
-    // UploadComponent,
+    //UploadComponent,
     // ReportComponent,
   ],
   imports: [
