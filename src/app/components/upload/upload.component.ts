@@ -25,7 +25,6 @@ export class UploadComponent implements OnInit {
     this.uploader.onAfterAddingFile = (file) => { file.withCredentials = false; };
     this.uploader.onCompleteItem = (item: any, response: any, status: any, headers: any) => {
       this.attachmentList.push(JSON.parse(response));
-      console.log('ImageUpload:uploaded:', item, status, response);
     }
   }
 

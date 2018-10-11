@@ -7,21 +7,7 @@ label {
     padding: 6px 20px;
     width:250px;
 }
-    input[type='file'] {
-    display: none
-  }
 
-  input[type='text'] {
-    margin-top: 200px;
-    margin-left: 150px;
-    width:500px;
-    border: 1px solid #00A335;
-    border-right: 3px solid #00A335;
-    color: #00A94C;
-    cursor: pointer;
-    padding: 6px 20px
-    
-  }
   button[type='submit']{
       background-color: #00A335;
     border: 1px solid #00A335;
