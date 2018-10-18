@@ -13,6 +13,7 @@ import { HeaderPageComponent } from './theme/header-page/header-page.component';
 import { LoginComponent } from './components/login/login.component';
 import { LoginModule } from './components/login/login.module';
 import { UploadComponent } from './components/upload/upload.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { UploadComponent } from './components/upload/upload.component';
     ExampleModule,
     HttpClientModule,
     FileUploadModule,
-    LoginModule
+    LoginModule,
+	FormsModule
   ],
   exports: [],
   providers: [],

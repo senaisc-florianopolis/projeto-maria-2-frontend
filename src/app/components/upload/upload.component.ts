@@ -17,7 +17,7 @@ export class UploadComponent implements OnInit {
 
   public attachmentList: any = [];
   public isNotValid: boolean;
-
+  public myFile;
   constructor(private _fileService: ExampleService) { }
 
   ngOnInit() {
@@ -30,11 +30,13 @@ export class UploadComponent implements OnInit {
 
 
   //Validation only for one file
-  public validateFile() {
-    let fileTxt = this.uploader.queue[0]._file.name as string;
+  public validateFile(name) {
+    let fileTxt = name;
     let ext = fileTxt.substring(fileTxt.lastIndexOf(".")) as string;
     if (ext == this.validExtension) {
-      this.uploader.uploadAll();
+//
+	  this.isNotValid = false;
+	  console.error("Válido");
     } else {
       this.isNotValid = true;
       console.error("Extensão do arquivo não é compativel!");
@@ -51,6 +53,18 @@ export class UploadComponent implements OnInit {
         error => console.error(error)
       );
   }
-
+  
+  public getFileName(){
+	if(this.uploader.queue.length > 1 ){
+		this.uploader.queue[0].remove()
+	}
+	const name = this.uploader.queue[0].file.name;
+	this.myFile = name;
+	this.validateFile(name);
+  }
+  
+  public sendFile(){
+	  this.uploader.uploadAll();
+  }
 }
 

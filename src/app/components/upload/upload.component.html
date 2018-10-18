@@ -3,14 +3,18 @@
     <div class="col-md-12">
 
       <div class="input-group">
-        <input type="file" class="form-control input-upload" name="fileUplaod" id="fileUpload" multiple ng2FileSelect
-          [uploader]="uploader" aria-describedby="basic-addon2">
+        <input [(ngModel)]="myFile" (click)="fileInput.click()"  class="form-control input-upload" ngModel="myFile">
+		
         <div class="input-group-append">
-          <button type="button" class="btn btn-success btn-s btn-upload " (click)="validateFile()" [disabled]="!uploader.getNotUploadedItems().length">
+          <button (click)="fileInput.click()" type="button" class="btn btn-success btn-s btn-upload " (click)="validateFile()">
             Selecionar
           </button>
+		  <span style="visibility: hidden; position: absolute; overflow: hidden; width: 0px; height:0px;border:none;margin:0; padding:0">
+			 <input (change)="getFileName()" type="file" #fileInput ng2FileSelect [uploader]="uploader" />
+		  </span>
         </div>
       </div>
+		
 
       <div *ngIf="isNotValid">
         <div class="alert alert-danger" role="alert">
@@ -19,15 +23,10 @@
       </div>
      
       <div class="div-btn-upload-confirm">
-        <button type="button" class="btn btn-success btn-s btn-upload-confirm" (click)="validateFile()" [disabled]="!uploader.getNotUploadedItems().length">
+        <button type="button" class="btn btn-success btn-s btn-upload-confirm" (click)="sendFile()" [disabled]="!uploader.getNotUploadedItems().length">
           Confirmar
         </button>
       </div>
     </div>
   </div>
 </div>
-
-<label for="file-upload" class="custom-file-upload">
-  <i class="fa fa-cloud-upload"></i> Custom Upload
-</label>
-<input id="file-upload" type="file"/>

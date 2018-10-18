@@ -9,6 +9,7 @@ import { HttpModule } from '@angular/http';
 import { FileUploader } from 'ng2-file-upload/ng2-file-upload';
 import { FileUploadModule } from 'ng2-file-upload';
 import { UploadComponent } from '../upload/upload.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
@@ -16,7 +17,7 @@ import { UploadComponent } from '../upload/upload.component';
     ExampleRoutingModule,
     HttpModule,
     FileUploadModule,
-
+	FormsModule
   ],
   declarations: [
     ExampleComponent,
