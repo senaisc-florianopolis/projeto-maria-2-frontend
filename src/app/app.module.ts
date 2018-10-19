@@ -22,7 +22,7 @@ import { FormsModule } from '@angular/forms';
     NavBarComponent,
     SidenavComponent,
     CarregarComponent,
-    HeaderPageComponent,
+    //HeaderPageComponent,
     LoginComponent,
     //UploadComponent,
     // ReportComponent,

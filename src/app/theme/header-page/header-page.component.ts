@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header-page',
@@ -7,14 +8,13 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class HeaderPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   @Input('routeName') routeName: string;
-  @Input('routePath') routePath: string;
+
 
   ngOnInit() {
-    this.routeName = "Default"
-    this.routePath = "Home > Default"
+	  
   }
-
+  
 }

@@ -12,11 +12,12 @@ export class ExampleComponent implements OnInit {
   constructor(private service: ExampleService, private router: Router) { }
 
   data = [];
-
+  pageName="Exemplo";
+  
   ngOnInit() {
     this.getListUsers();
   }
-
+	
   getListUsers() {
     this.service.get().subscribe(data => {
       console.log(data),
