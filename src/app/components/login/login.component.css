@@ -1,116 +1,43 @@
-.card-container.card {
-    max-width: 350px;
-    padding: 40px 40px;
+div {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #00A335;
+   height: 100vh;
 }
-
-.btn {
-    font-weight: 700;
-    height: 36px;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    user-select: none;
-    cursor: default;
-}
-
-
-/*
- * Card component
- */
-
-.card {
-    background-color: #f7f7f7;
-    /* just in case there no content*/
-    padding: 20px 25px 30px;
-    margin: 0 auto 25px;
-    margin-top: 50px;
-    /* shadows and rounded borders */
-    -moz-border-radius: 2px;
-    -webkit-border-radius: 2px;
-    border-radius: 2px;
-    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-}
-
-.profile-img-card {
-    width: 96px;
-    height: 96px;
-    margin: 0 auto 10px;
-    display: block;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-}
-
-.form-login #inputEmail,
-.form-login #inputPassword {
-    direction: ltr;
-    height: 44px;
-    font-size: 16px;
-}
-
-.form-login input[type=email],
-.form-login input[type=password],
-.form-login input[type=text],
-.form-login button {
-    width: 100%;
-    display: block;
-    margin-bottom: 10px;
-    z-index: 1;
-    position: relative;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-.form-login .form-control:focus {
-    border-color: rgb(104, 145, 162);
-    outline: 0;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgb(104, 145, 162);
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgb(104, 145, 162);
-}
-
-.btn.btn-signin {
-    background-color: rgb(104, 145, 162);
-    padding: 0px;
-    font-weight: 700;
-    font-size: 14px;
-    height: 36px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
+.intelbras-login-input {
+    margin-bottom: 25px;
+    color: #fff !important;
+    background-color: transparent;
     border: none;
-    -o-transition: all 0.218s;
-    -moz-transition: all 0.218s;
-    -webkit-transition: all 0.218s;
-    transition: all 0.218s;
+    border-bottom: solid 2px #fff;
+    border-radius: 0;
+    outline: none;
+    box-shadow: none;
+    text-align: left;
+}
+.intelbras-login-btn {
+	font-family: 'Montserrat','Font Awesome 5 Free', sans-serif;
+    background-color: #fff;
+    color: #4da437;
+    font-weight: bolder;
+    font-size: initial;
+    border: none;
 }
 
-.btn.btn-signin:hover,
-.btn.btn-signin:active,
-.btn.btn-signin:focus {
-    background-color: rgb(83, 116, 130);
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    font-family: 'Montserrat','Font Awesome 5 Free', sans-serif;
+    color: white;
 }
 
-.logo-generic {
-    margin-top: 5%;
-    width: 25%;
-}
-
-@media only screen and (max-width: 990px) {
-    .logo-generic {
-        width: 35%;
-    }
-}
-
-@media only screen and (max-width: 652px) {
-    .logo-generic {
-        width: 55%;
-    }
-}
-
-.form-signin {
-    width: 100%;
-    padding: 30px;
-    margin: 0 auto;
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: white;
 }
