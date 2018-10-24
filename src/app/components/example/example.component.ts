@@ -13,6 +13,7 @@ export class ExampleComponent implements OnInit {
 
   data = [];
   pageName="Exemplo";
+  module="produto";
   
   ngOnInit() {
     this.getListUsers();
