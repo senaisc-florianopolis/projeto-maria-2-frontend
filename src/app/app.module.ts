@@ -1,6 +1,6 @@
 import { ExampleRoutingModule } from './components/example/example-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA  } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { ExampleModule } from './components/example/example.module';
@@ -14,6 +14,12 @@ import { LoginComponent } from './components/login/login.component';
 import { LoginModule } from './components/login/login.module';
 import { UploadComponent } from './components/upload/upload.component';
 import { FormsModule } from '@angular/forms';
+import { FamiliaModule } from './components/familia/familia.module';
+import { HttpModule } from '@angular/http';
+import { FileUploader } from 'ng2-file-upload/ng2-file-upload';
+import { FileUploadModule } from 'ng2-file-upload';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
@@ -22,9 +28,9 @@ import { FormsModule } from '@angular/forms';
     NavBarComponent,
     SidenavComponent,
     CarregarComponent,
-    //HeaderPageComponent,
-    LoginComponent,
-    //UploadComponent,
+	LoginComponent,
+    HeaderPageComponent,
+    UploadComponent,
     // ReportComponent,
   ],
   imports: [
@@ -35,10 +41,18 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     FileUploadModule,
     LoginModule,
-	FormsModule
+	FormsModule,
+	FamiliaModule,
+	HttpModule,
+	FileUploadModule,
+	CommonModule,
+	FormsModule,
   ],
   exports: [],
-  providers: [],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
+  providers: [
+	
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

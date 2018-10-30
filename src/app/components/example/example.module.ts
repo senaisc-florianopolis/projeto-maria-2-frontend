@@ -1,4 +1,4 @@
-import { HeaderPageComponent } from '../../theme/header-page/header-page.component';
+// import { HeaderPageComponent } from '../../theme/header-page/header-page.component';
 import { ExampleComponent } from './example.component';
 import { CreateExampleComponent } from './create-example/create-example.component';
 import { NgModule } from '@angular/core';
@@ -8,7 +8,7 @@ import { ExampleService } from './example.service';
 import { HttpModule } from '@angular/http';
 import { FileUploader } from 'ng2-file-upload/ng2-file-upload';
 import { FileUploadModule } from 'ng2-file-upload';
-import { UploadComponent } from '../upload/upload.component';
+// import { UploadComponent } from '../upload/upload.component';
 import { FormsModule } from '@angular/forms';
 
 
@@ -23,8 +23,8 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     ExampleComponent,
     CreateExampleComponent,
-    UploadComponent,
-	HeaderPageComponent
+    // UploadComponent,
+	// HeaderPageComponent
   ],
   providers: [
     ExampleService
