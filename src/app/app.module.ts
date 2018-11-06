@@ -1,9 +1,7 @@
-import { ExampleRoutingModule } from './components/example/example-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA  } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
-import { ExampleModule } from './components/example/example.module';
 import { NavBarComponent } from './theme/nav-bar/nav-bar.component';
 import { SidenavComponent } from './theme/sidenav/sidenav.component';
 import { CarregarComponent } from './theme/carregar/carregar.component';
@@ -14,13 +12,13 @@ import { LoginComponent } from './components/login/login.component';
 import { LoginModule } from './components/login/login.module';
 import { UploadComponent } from './components/upload/upload.component';
 import { FormsModule } from '@angular/forms';
-import { FamiliaModule } from './components/familia/familia.module';
+import { ExampleComponent } from './components/example/example.component';
+import { CreateExampleComponent } from './components/example/create-example/create-example.component';
+import { ExampleService } from './components/example/example.service';
+import { Rotas } from './rotas';
 import { HttpModule } from '@angular/http';
-import { FileUploader } from 'ng2-file-upload/ng2-file-upload';
-import { FileUploadModule } from 'ng2-file-upload';
-import { FormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
 
+const routes = new Rotas()
 
 @NgModule({
   declarations: [
@@ -28,31 +26,23 @@ import { CommonModule } from '@angular/common';
     NavBarComponent,
     SidenavComponent,
     CarregarComponent,
-	LoginComponent,
-    HeaderPageComponent,
+    LoginComponent,
+    ExampleComponent,
+    CreateExampleComponent,
     UploadComponent,
-    // ReportComponent,
+    HeaderPageComponent,
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot([]),
-    ExampleRoutingModule,
-    ExampleModule,
+	RouterModule.forRoot([]),
+    RouterModule.forRoot(routes.path),
+    HttpModule,
     HttpClientModule,
     FileUploadModule,
-    LoginModule,
-	FormsModule,
-	FamiliaModule,
-	HttpModule,
-	FileUploadModule,
-	CommonModule,
-	FormsModule,
+    FormsModule
   ],
   exports: [],
-  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
-  providers: [
-	
-  ],
+  providers: [ExampleService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
