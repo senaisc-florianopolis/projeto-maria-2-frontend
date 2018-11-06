@@ -20,12 +20,8 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-    console.log(this.router)
     localStorage.setItem('isLogged', "true");
-    // this.authService.login(this.user).subscribe(data =>
-    //   this.responseLogin = data);
-    // this.authService.getToken();
-    // console.log(this.authService.getPermissions())
+    this.router.navigate(['/'])
   }
 
 }

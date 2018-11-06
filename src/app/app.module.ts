@@ -1,9 +1,7 @@
-import { ExampleRoutingModule } from './components/example/example-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
-import { ExampleModule } from './components/example/example.module';
 import { NavBarComponent } from './theme/nav-bar/nav-bar.component';
 import { SidenavComponent } from './theme/sidenav/sidenav.component';
 import { CarregarComponent } from './theme/carregar/carregar.component';
@@ -14,7 +12,13 @@ import { LoginComponent } from './components/login/login.component';
 import { LoginModule } from './components/login/login.module';
 import { UploadComponent } from './components/upload/upload.component';
 import { FormsModule } from '@angular/forms';
+import { ExampleComponent } from './components/example/example.component';
+import { CreateExampleComponent } from './components/example/create-example/create-example.component';
+import { ExampleService } from './components/example/example.service';
+import { Rotas } from './rotas';
 
+
+const routes = new Rotas()
 
 @NgModule({
   declarations: [
@@ -22,23 +26,23 @@ import { FormsModule } from '@angular/forms';
     NavBarComponent,
     SidenavComponent,
     CarregarComponent,
-    //HeaderPageComponent,
     LoginComponent,
-    //UploadComponent,
-    // ReportComponent,
+    ExampleComponent,
+    CreateExampleComponent,
+    UploadComponent,
+    HeaderPageComponent,
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot([]),
-    ExampleRoutingModule,
-    ExampleModule,
+    RouterModule.forChild(routes.path),
     HttpClientModule,
     FileUploadModule,
-    LoginModule,
-	FormsModule
+    // LoginModule,
+    FormsModule
   ],
   exports: [],
-  providers: [],
+  providers: [ExampleService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
