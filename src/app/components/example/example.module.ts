@@ -8,7 +8,7 @@ import { ExampleService } from './example.service';
 import { HttpModule } from '@angular/http';
 import { FileUploader } from 'ng2-file-upload/ng2-file-upload';
 import { FileUploadModule } from 'ng2-file-upload';
-// import { UploadComponent } from '../upload/upload.component';
+import { UploadComponent } from './upload/upload.component';
 import { FormsModule } from '@angular/forms';
 
 
@@ -23,7 +23,7 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     ExampleComponent,
     CreateExampleComponent,
-    // UploadComponent,
+    UploadComponent,
 	// HeaderPageComponent
   ],
   providers: [
