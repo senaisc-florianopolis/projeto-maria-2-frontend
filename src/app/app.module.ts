@@ -15,10 +15,9 @@ import { FormsModule } from '@angular/forms';
 import { ExampleComponent } from './components/example/example.component';
 import { CreateExampleComponent } from './components/example/create-example/create-example.component';
 import { ExampleService } from './components/example/example.service';
-import { Rotas } from './rotas';
+import { routes } from './rotas';
 import { HttpModule } from '@angular/http';
 
-const routes = new Rotas()
 
 @NgModule({
   declarations: [
@@ -35,7 +34,7 @@ const routes = new Rotas()
   imports: [
     BrowserModule,
 	RouterModule.forRoot([]),
-    RouterModule.forRoot(routes.path),
+    RouterModule.forRoot(routes),
     HttpModule,
     HttpClientModule,
     FileUploadModule,
