@@ -17,7 +17,7 @@ import { CreateExampleComponent } from './components/example/create-example/crea
 import { ExampleService } from './components/example/example.service';
 import { routes } from './rotas';
 import { HttpModule } from '@angular/http';
-
+import { FamiliaComponent } from "./components/familia/familia.component";
 
 @NgModule({
   declarations: [
@@ -30,6 +30,7 @@ import { HttpModule } from '@angular/http';
     CreateExampleComponent,
     UploadComponent,
     HeaderPageComponent,
+	FamiliaComponent
   ],
   imports: [
     BrowserModule,
