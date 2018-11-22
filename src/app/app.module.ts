@@ -18,6 +18,8 @@ import { ExampleService } from './components/example/example.service';
 import { routes } from './rotas';
 import { HttpModule } from '@angular/http';
 import { FamiliaComponent } from "./components/familia/familia.component";
+import { EstimativaComponent } from './components/estimativa/estimativa.component';
+import { ProdutoComponent } from './components/produto/produto.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { FamiliaComponent } from "./components/familia/familia.component";
     CreateExampleComponent,
     UploadComponent,
     HeaderPageComponent,
-	FamiliaComponent
+	FamiliaComponent,
+	EstimativaComponent,
+	ProdutoComponent
   ],
   imports: [
     BrowserModule,
