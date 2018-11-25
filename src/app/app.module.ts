@@ -32,13 +32,13 @@ import { ProdutoComponent } from './components/produto/produto.component';
     CreateExampleComponent,
     UploadComponent,
     HeaderPageComponent,
-	FamiliaComponent,
-	EstimativaComponent,
-	ProdutoComponent
+    FamiliaComponent,
+    EstimativaComponent,
+    ProdutoComponent
   ],
   imports: [
     BrowserModule,
-	RouterModule.forRoot([]),
+	  RouterModule.forRoot([]),
     RouterModule.forRoot(routes),
     HttpModule,
     HttpClientModule,
