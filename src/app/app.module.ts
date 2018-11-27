@@ -20,6 +20,8 @@ import { HttpModule } from '@angular/http';
 import { FamiliaComponent } from "./components/familia/familia.component";
 import { EstimativaComponent } from './components/estimativa/estimativa.component';
 import { ProdutoComponent } from './components/produto/produto.component';
+import { CanalComponent } from './components/canal/canal.component';
+import { HistoricoComponent } from './components/historico/historico.component';
 
 @NgModule({
   declarations: [
@@ -34,11 +36,12 @@ import { ProdutoComponent } from './components/produto/produto.component';
     HeaderPageComponent,
     FamiliaComponent,
     EstimativaComponent,
-    ProdutoComponent
+    ProdutoComponent,
+    CanalComponent,
+    HistoricoComponent
   ],
   imports: [
     BrowserModule,
-	  RouterModule.forRoot([]),
     RouterModule.forRoot(routes),
     HttpModule,
     HttpClientModule,
